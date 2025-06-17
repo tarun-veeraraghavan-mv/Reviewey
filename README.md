@@ -73,7 +73,6 @@ https://github.com/user-attachments/assets/c8950c5b-f9d1-48ec-8cea-38345e1c81f9
 
 ## 📂 Future Enhancements
 
-- 🧩 GitHub/GitLab PR integration for auto-review comments
+- 🧩 GitLab PR integration for auto-review comments
 - 📌 User dashboard for review history and analytics
 - 🧠 Plugin system to support more LLMs (Claude, Gemini, GPT-4)
-- 📋 Export reviews as PDF or markdown
