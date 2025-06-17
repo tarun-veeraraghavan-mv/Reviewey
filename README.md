@@ -58,14 +58,14 @@ A full-stack AI-powered web application that automates multi-language code revie
 | Frontend      | Backend       | AI & Tools        | DevOps / Infra      |
 | ------------- | ------------- | ----------------- | ------------------- |
 | React         | Express.js    | DeepSeek LLM      | GitHub Actions      |
-| Tailwind CSS  | MongoDB       | Prompt Engineering| Railway / Vercel    |
-| Axios, Socket.IO | JWT, MVC  | Vitest, Playwright| MSW (Mocking)       |
+|               | MongoDB       | Prompt Engineering| Railway / Vercel    |
+| Axios, Socket.IO | JWT, MVC  | Vitest, Playwright, MSW (Mocking) |       |
 
 ---
 
 ## 📷 Preview
 
-*(Add screenshots or video demos here — you can use GitHub assets or Loom video)*
+
 
 ---
 
@@ -75,15 +75,3 @@ A full-stack AI-powered web application that automates multi-language code revie
 - 📌 User dashboard for review history and analytics
 - 🧠 Plugin system to support more LLMs (Claude, Gemini, GPT-4)
 - 📋 Export reviews as PDF or markdown
-
----
-
-## 📂 Dataset
-
-Not applicable (no training involved) — LLM performs real-time inference based on input prompts.
-
----
-
-## 🔗 Repo
-
-> Coming soon: [Live Demo](#) • [Frontend Repo](#) • [Backend Repo](#)
