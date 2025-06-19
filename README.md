@@ -32,6 +32,9 @@ A full-stack AI-powered web application that automates multi-language code revie
 
 ## 📦 System Architecture
 
+![ai-code-review-flowchart drawio](https://github.com/user-attachments/assets/feb2e585-5c65-445a-9f6d-78acbaa15822)
+
+
 - **Frontend**: React + Tailwind CSS for responsive, fast UI
 - **Backend**: Express.js + MongoDB following **MVC pattern**
 - **Real-time Communication**: Enabled via **Socket.IO**
