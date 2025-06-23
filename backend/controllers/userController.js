@@ -20,8 +20,8 @@ exports.register = async (req, res) => {
 
     const user = await User.create({ name, email, password: hashedPassword });
 
-    const token = jwt.sign({ id: user._id }, "SECRET", {
-      expiresIn: "90d",
+    const token = jwt.sign({ id: user._id }, ${process.env.JWT_SECRET}, {
+      expiresIn: ${process.env.JWT_EXPIRATION},
     });
 
     res.status(201).json({ token, user });
@@ -55,8 +55,8 @@ exports.login = async (req, res) => {
     return;
   }
 
-  const token = jwt.sign({ id: user._id }, "SECRET", {
-    expiresIn: "90d",
+  const token = jwt.sign({ id: user._id }, ${process.env.JWT_SECRET}, {
+    expiresIn: ${process.env.JWT_EXPIRATION},
   });
   res.status(200).json({ token, user });
 };
@@ -90,7 +90,7 @@ exports.me = async (req, res) => {
       return res.status(401).json({ error: "User is not authorized" });
     }
 
-    const decoded = await promisify(jwt.verify)(token, "SECRET");
+    const decoded = await promisify(jwt.verify)(token, ${process.env.JWT_SECRET});
     const user = await User.findById(decoded.id);
 
     if (!user) {
