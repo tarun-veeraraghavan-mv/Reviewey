@@ -22,20 +22,20 @@ exports.createReport = async (req, res) => {
   const { code, codeStandards, userId } = req.body;
 
   const openrouterApiKey =
-    "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";
+    ${process.env.OPENAI_API_KEY};
 
-  const openrouterApiUrl = "https://openrouter.ai/api/v1/chat/completions";
+  const openrouterApiUrl = ${process.env.OPENAI_API_URL};
 
   const result = await fetch(openrouterApiUrl, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${openrouterApiKey}`,
-      "HTTP-Referer": "<YOUR_SITE_URL>", // Optional. Site URL for rankings on openrouter.ai.
-      "X-Title": "<YOUR_SITE_NAME>", // Optional. Site title for rankings on openrouter.ai.
+      "HTTP-Referer": ${process.env.SITE_URL}, // Optional. Site URL for rankings on openrouter.ai.
+      "X-Title": ${process.env.SITE_NAME}, // Optional. Site title for rankings on openrouter.ai.
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "deepseek/deepseek-r1-0528-qwen3-8b:free",
+      model: ${process.env.OPENAI_API_MODEL_NAME},
       messages: [
         {
           role: "system",
